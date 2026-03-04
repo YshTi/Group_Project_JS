@@ -1,49 +1,62 @@
-# Vanilla App Template
+# Group Project
 
-Цей проект було створено за допомогою Vite. Для знайомства та налаштування
-додаткових можливостей [звернись до документації](https://vitejs.dev/).
+## Pets adoption website
 
-## Підготовка до роботи
+[![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://travis-ci.org/joemccann/dillinger)
+(_This project was created by a group of students during the JavaScript learning
+program at the GoIT course._)
 
-1. Переконайся, що на комп'ютері встановлено LTS-версію Node.js.
-   [Скачай та встанови](https://nodejs.org/en/) її якщо необхідно.
-2. Встанови базові залежності проекту в терміналі командою `npm install`.
-3. Запусти режим розробки, виконавши в терміналі команду `npm run dev`.
-4. Перейдіть у браузері за адресою
-   [http://localhost:5173](http://localhost:5173). Ця сторінка буде автоматично
-   перезавантажуватись після збереження змін у файли проекту.
+## Project Description
 
-## Файли і папки
+No matter where you live, having a companion always makes life brighter. But the
+question is: who will it be?
 
-- Файли розмітки компонентів сторінки повинні лежати в папці `src/partials` та
-  імпортуватись до файлу `index.html`. Наприклад, файл з розміткою хедера
-  `header.html` створюємо у папці `partials` та імпортуємо в `index.html`.
-- Файли стилів повинні лежати в папці `src/css` та імпортуватись до HTML-файлів
-  сторінок. Наприклад, для `index.html` файл стилів називається `index.css`.
-- Зображення додавай до папки `src/img`. Збирач оптимізує їх, але тільки при
-  деплої продакшн версії проекту. Все це відбувається у хмарі, щоб не
-  навантажувати твій комп'ютер, тому що на слабких компʼютерах це може зайняти
-  багато часу.
+One of the best solutions is to adopt a pet. A pet can become a loyal friend who
+will stay by your side, bringing joy, comfort, and emotional support.
 
-### Жива сторінка
+> “Until one has loved an animal, a part of one’s soul remains unawakened.” —
+> Anatole France
 
-Через якийсь час, зазвичай кілька хвилин, живу сторінку можна буде подивитися за
-адресою, вказаною на вкладці `Settings` > `Pages` в налаштуваннях репозиторію.
-Наприклад, ось посилання на живу версію для цього репозиторію
+However, adopting a pet often raises many questions. **How do you adopt an
+animal? Which pet is the right one for you? How should you prepare your home to
+welcome a new family member?**
 
-[https://goitacademy.github.io/vanilla-app-template/](https://goitacademy.github.io/vanilla-app-template/).
+Our website helps answer all of these questions! It not only allows you to
+choose a future companion but also provides helpful information to prepare for
+welcoming your new pet into your life.
 
-Якщо відкриється порожня сторінка, переконайся, що у вкладці `Console` немає
-помилок пов'язаних з неправильними шляхами до CSS та JS файлів проекту
-(**404**). Швидше за все у тебе неправильне значення прапора `--base` для
-команди `build` у файлі `package.json`.
+## Technologies used
 
-## Як це працює
+- HTML,
+- CSS,
+- JavaScript (ES6+),
+- External libraries:
+  - Swiper;
+  - Raty / CSS Star Rating (?);
+  - Accordion.js;
+  - SweetAlert2;
+  - basicLightbox.
 
-1. Після кожного пуша у гілку `main` GitHub-репозиторію, запускається
-   спеціальний скрипт (GitHub Action) із файлу `.github/workflows/deploy.yml`.
-2. Усі файли репозиторію копіюються на сервер, де проект ініціалізується та
-   проходить лінтинг та збірку перед деплоєм.
-3. Якщо всі кроки пройшли успішно, зібрана продакшн версія файлів проекту
-   відправляється у гілку `gh-pages`. В іншому випадку, у лозі виконання скрипта
-   буде вказано в чому проблема.
+## How to run the project
+
+To view the website, open the **About** section in the top-right corner of the
+page and click the provided link.
+
+## License
+
+**Free Software, Yeah!**
+
+Here you can find the list of people (their role) and responsibilities:
+
+- [Valentyn]() (design of the Header);
+- [Anna](https://github.com/AnnaSavina3087) (design of "Hero" section);
+- [Leonid](https://github.com/Liagic) (design of "Pets List" Section);
+- [Alina](https://github.com/alina-hryhorenko) (_role - scrum master_) (design
+  of "About US" Section);
+- [Andrii]() (design of the FAQ Section);
+- [Bohdan]() (design of "Success Stories" Section);
+- [Sergii]() (design of "Animal details" Modal window);
+- [Ihor]() (design of "Order" Modal window);
+- [Tetiana]() (design of the Footer);
+- [Tetiana](https://github.com/YshTi) (_role - team leader_) (responsibilities
+  in the project: JS structure, code review)
