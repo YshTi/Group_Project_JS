@@ -59,4 +59,4 @@ Here you can find the list of people (their role) and responsibilities:
 - [Ihor]() (design of "Order" Modal window);
 - [Tetiana]() (design of the Footer);
 - [Tetiana](https://github.com/YshTi) (_role - team leader_) (responsibilities
-  in the project: JS structure, code review)
+  in the project: Project structure, code review)
