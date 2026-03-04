@@ -3,6 +3,7 @@
 ## Pets adoption website
 
 [![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://travis-ci.org/joemccann/dillinger)
+
 (_This project was created by a group of students during the JavaScript learning
 program at the GoIT course._)
 
@@ -48,15 +49,15 @@ page and click the provided link.
 
 Here you can find the list of people (their role) and responsibilities:
 
-- [Valentyn]() (design of the Header);
+- [Valentyn](https://github.com/ZemanUA) (design of the Header);
 - [Anna](https://github.com/AnnaSavina3087) (design of "Hero" section);
 - [Leonid](https://github.com/Liagic) (design of "Pets List" Section);
 - [Alina](https://github.com/alina-hryhorenko) (_role - scrum master_) (design
   of "About US" Section);
-- [Andrii]() (design of the FAQ Section);
-- [Bohdan]() (design of "Success Stories" Section);
-- [Sergii]() (design of "Animal details" Modal window);
-- [Ihor]() (design of "Order" Modal window);
-- [Tetiana]() (design of the Footer);
+- [Andrii](https://github.com/Vadaska) (design of the FAQ Section);
+- [Bohdan](https://github.com/BodyaTk) (design of "Success Stories" Section);
+- [Sergii](https://github.com/BelSerhij) (design of "Animal details" Modal window);
+- [Ihor](https://github.com/IhorKuzmenko) (design of "Order" Modal window);
+- [Tetiana](https://github.com/Tetiana-Tatsii) (design of the Footer);
 - [Tetiana](https://github.com/YshTi) (_role - team leader_) (responsibilities
-  in the project: JS structure, code review)
+  in the project: Project structure, code review)
