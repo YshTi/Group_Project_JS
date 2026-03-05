@@ -2,7 +2,7 @@
   color: #fff;
   background-image:
     linear-gradient(90deg, rgba(62, 54, 38, 0.74) 0%, rgba(62, 54, 38, 0) 100%),
-    url(../img/hero/hero@1x.png);
+    url(/img/hero/hero@1x.png);
   background-repeat: no-repeat;
   background-position: 57%;
   background-size: cover;
@@ -17,7 +17,7 @@
         rgba(62, 54, 38, 0.74) 0%,
         rgba(62, 54, 38, 0) 100%
       ),
-      url(../img/hero/hero@2x.png);
+      url(/img/hero/hero@2x.png);
   }
 }
 
