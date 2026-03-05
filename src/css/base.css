@@ -24,16 +24,16 @@
 body {
   display: flex;
   flex-direction: column;
-  /* min-width: 100vw;
-  min-height: 100vh; */
+  min-width: 100vw;
+  min-height: 100vh;
   margin: 0;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'IBM Plex Sans', sans-serif;
 }
 
 h1,
 h2,
 h3 {
-  font-family: 'IBM Plex Sans', sans-serif;
+  font-family: 'Open Sans', sans-serif;
 }
 
 main {

@@ -106,10 +106,11 @@
   height: 45px;
   border: 1px solid transparent;
   border-radius: 8px;
-  background-color: #88765c;
-  color: #ffffff;
+  font-family: 'IBM Plex Sans', sans-serif;
   font-size: 14px;
   font-weight: 400;
+  background-color: #88765c;
+  color: #ffffff;
 }
 
 .formButton:focus,
