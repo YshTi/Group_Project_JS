@@ -21,6 +21,18 @@
   padding: 0;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+
 body {
   display: flex;
   flex-direction: column;
@@ -30,15 +42,10 @@ body {
   font-family: 'IBM Plex Sans', sans-serif;
 }
 
-h1,
-h2,
-h3 {
-  font-family: 'Open Sans', sans-serif;
-}
-
 main {
   flex-grow: 1;
 }
+
 main:has(.back-link) {
   text-align: center;
 }
