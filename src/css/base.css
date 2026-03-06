@@ -13,6 +13,19 @@
   -webkit-text-size-adjust: 100%;
   --swiper-theme-color: #8b6b4d;
 }
+/*
+html,
+body {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  background-color: #111;
+  color: #fff;
+}
+*/
+
 
 *,
 ::after,
