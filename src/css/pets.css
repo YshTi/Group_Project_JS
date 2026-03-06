@@ -156,6 +156,7 @@
 .our-pets-pagination-btn:hover,
 .our-pets-pagination-btn:focus {
   background: #eee9e3;
+  color: #02060a;
 }
 @media screen and (min-width: 768px) {
   .our-pets-categories {
@@ -213,4 +214,10 @@
     font-size: 16px;
     height: 48px;
   }
+}
+
+.IsHidden {
+  opacity: 0;
+  visible: hidden;
+  display: none;
 }
