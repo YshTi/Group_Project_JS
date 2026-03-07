@@ -1,5 +1,6 @@
 import Accordion from 'accordion-js';
 import 'accordion-js/dist/accordion.min.css';
+import sprite from '../img/sprite.svg';
 
 document.addEventListener('DOMContentLoaded', function () {
   const accordion = new Accordion('.faq-accordion', {
@@ -14,9 +15,9 @@ document.addEventListener('DOMContentLoaded', function () {
       const icon = item.querySelector('.faq-icon use');
       const spritePath = `${import.meta.env.BASE_URL}img/sprite.svg`;
       if (item.classList.contains('is-active')) {
-        icon.setAttribute('href', `${spritePath}#icon-close`);
+        icon.setAttribute('href', `${sprite}#icon-close`);
       } else {
-        icon.setAttribute('href', `${spritePath}#icon-add`);
+        icon.setAttribute('href', `${sprite}#icon-add`);
       }
       /*
       if (item.classList.contains('is-active')) {
