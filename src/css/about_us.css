@@ -100,7 +100,6 @@
 
 .about__buttons {
     width: 251px;
-    min-width: 251px;
     height: 64px;
     margin-left: auto;
     display: flex;
