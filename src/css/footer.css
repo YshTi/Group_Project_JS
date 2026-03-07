@@ -132,6 +132,13 @@
     transform: translateY(20px) scale(0.95);
 }
 
+@media (max-width: 375px) {
+    .footer__cat-decor {
+        width: clamp(60px, 20vw, 130px);
+        bottom: 70px;
+    }
+}
+
 .footer__cat-decor.is-visible {
     animation: catAppear 0.6s ease-out forwards;
 }
