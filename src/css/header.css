@@ -118,8 +118,33 @@ a{
 /* BLOCK @MEDIA */
 
 /* Styles for Mobile devices */
-
+.header_container {
+  margin: 0;
+  padding: 0;
+}
+@media only screen and (max-width: 375px) {
+  .header_container {
+    max-width: 375px;
+  }
+}
 /* Styles for Tablet devices */
+@media only screen and (min-width: 770px) {
+  .header_container {
+    min-width: 770px;
+  }
+
+}
+/* Styles for Desktop devices */
+@media only screen and (min-width: 1200px) {
+  .header_container {
+    min-width: 1200px;
+  }
+    .menu-list{
+    display: flex;
+    flex-direction: row;
+    visibility: visible;
+  }
+}
 
 
 @media only screen and ( width < 1440px){
