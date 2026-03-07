@@ -1,4 +1,5 @@
 import { getCategories, searchPets } from './paw-api.js';
+import { messageError } from './messages.js';
 export function getPetByID(id) {
   // For modal
   return petsStore.find(p => p._id === id);
@@ -8,6 +9,7 @@ let petsStore = [];
 let currentCategory = 'all';
 let currentPage = 1;
 let totalPages;
+let currentItemsPerPage = getItemsPerPage();
 function getItemsPerPage() {
   return window.innerWidth >= 1440 ? 9 : 8;
 }
@@ -19,8 +21,7 @@ async function loadCategories() {
     const categories = await getCategories();
     renderCategories(categories);
   } catch (error) {
-    console.log('Categories load error:', error);
-    //   ADD ERROR MESSAGE TO USER
+    messageError(error.status);
   }
 }
 function renderCategories(categories) {
@@ -63,10 +64,9 @@ async function loadAnimals(loadMore = false) {
     currentPage = 1;
   }
   const category = currentCategory === 'all' ? '' : currentCategory;
-  const perPage = getItemsPerPage();
   try {
-    const result = await searchPets(category, currentPage, perPage);
-    totalPages = Math.ceil(result.totalItems / perPage);
+    const result = await searchPets(category, currentPage, currentItemsPerPage);
+    totalPages = Math.ceil(result.totalItems / currentItemsPerPage);
     renderAnimals(result.animals);
 
     checkPages(); //switches page button if necessary
@@ -76,7 +76,7 @@ async function loadAnimals(loadMore = false) {
       petsStore = result.animals;
     }
   } catch (error) {
-    console.log('error'); // ADD ERROR MESSAGE TO USER
+    messageError(error.status);
   } finally {
     hideLoader();
   }
