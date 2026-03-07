@@ -1,10 +1,5 @@
 /* ---------- Mobile ------------ */
 
-.about {
-    padding-top: 64px;
-    padding-bottom: 64px;
-}
-
 .about__container {
     position: relative;
 }
@@ -86,7 +81,7 @@
 .about__controls {
     display: flex;
     align-items: center;
-    gap: 24px;
+    /*gap: 24px; */
     width: 100%;
     max-width: 335px;
     height: 64px;
