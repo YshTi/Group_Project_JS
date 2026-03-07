@@ -1,5 +1,7 @@
 import { getCategories, searchPets } from './paw-api.js';
 import { messageError } from './messages.js';
+import { openModal } from './animal_detail.js';
+
 export function getPetByID(id) {
   // For modal
   return petsStore.find(p => p._id === id);
@@ -81,6 +83,25 @@ async function loadAnimals(loadMore = false) {
     hideLoader();
   }
 }
+
+
+
+ANIMAL_LIST.addEventListener('click', (event) => {
+  const btn = event.target.closest('.pets-btn');
+  if (!btn) return;
+
+  const petId = btn.dataset.id;
+  const petData = getPetByID(petId);
+  
+  if (petData) {
+    openModal(petData);
+  }
+});
+
+
+
+
+
 
 function renderAnimals(animals) {
   let markup = animals

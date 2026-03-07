@@ -265,11 +265,6 @@
 /* ------- DESKTOP (>=1440px) --------- */
 
 @media (min-width: 1440px) {
-    .about {
-        padding-top: 80px;
-        padding-bottom: 80px;
-    }
-
 
      .about__title {
               font-size: 48px;
