@@ -1,4 +1,4 @@
-import './js/hero-preload.js';
+/*import './js/hero-preload.js';*/
 import './js/pets-list.js';
 import './js/FAQ.js';
 import { render } from './js/render-stories';
