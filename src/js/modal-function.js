@@ -20,16 +20,21 @@ export function openModalForm(animalId) {
     'submit',
     async e => {
       e.preventDefault();
-      if (!form.reportValidity()) return;
+
+      if (!form.name.value.trim() || !form.tel.value.trim()) {
+        form.reportValidity();
+        return;
+      }
 
       const formData = {
         name: form.name.value.trim(),
         phone: form.tel.value.trim(),
         animalId: form.dataset.animalId,
-        comment: form.comment.value.trim(),
+        comment: form.comment.value.trim() || 'Немає коментаря',
       };
 
       try {
+        showFormLoader();
         await createOrder(formData);
 
         Swal.fire({
@@ -46,6 +51,8 @@ export function openModalForm(animalId) {
           text:
             error.response?.data?.message || 'Помилка при відправленні заявки',
         });
+      } finally {
+        hideFormLoader();
       }
     },
     { once: true }
@@ -79,3 +86,13 @@ document.addEventListener('keydown', e => {
   if (e.key === 'Escape' && !backdrop.classList.contains('is-hidden'))
     closeFormModal();
 });
+
+const formLoader = document.querySelector('#form-backdrop .loader');
+
+function showFormLoader() {
+  formLoader.classList.remove('is-hidden');
+}
+
+function hideFormLoader() {
+  formLoader.classList.add('is-hidden');
+}
