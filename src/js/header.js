@@ -1,11 +1,15 @@
 const burgerOpen = document.querySelector('.nav-burgermenu');
 const burgerClose = document.querySelector('.mobile-close-icon');
-const modalMobile = document.querySelector('.mobile-modal');  
+const modalMobile = document.querySelector('.mobile-modal');
+const body = document.querySelector('body');
+console.log(body);
 burgerOpen.addEventListener('click', () => {
 modalMobile.classList.add("is-active");
+body.style.overflow = "hidden";
 })
 burgerClose.addEventListener('click', () => {
 modalMobile.classList.remove("is-active");
+body.style.overflow = "auto";
 })
 
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -14,7 +18,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     if(modalMobile.classList.contains('is-active')){
     modalMobile.classList.remove('is-active');
     }
-    
     document.querySelector(this.getAttribute('href')).scrollIntoView({
       behavior: 'smooth',
       block: 'start'
