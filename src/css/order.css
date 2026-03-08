@@ -12,6 +12,10 @@
     visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.swal2-popup {
+  --swal2-confirm-button-background-color: #88765c;
+}
+
 .modal {
   position: relative;
   padding: 64px 20px 64px;
@@ -153,7 +157,11 @@
   display: block;
 }
 
-.isHidden {
+.body-no-scroll {
+  overflow: hidden;
+}
+
+.is-hidden {
   opacity: 0;
   visibility: hidden;
 }

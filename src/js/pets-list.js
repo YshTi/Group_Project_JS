@@ -1,4 +1,7 @@
 import { getCategories, searchPets } from './paw-api.js';
+import { messageError } from './messages.js';
+import { openModal } from './animal_detail.js';
+
 export function getPetByID(id) {
   // For modal
   return petsStore.find(p => p._id === id);
@@ -8,6 +11,7 @@ let petsStore = [];
 let currentCategory = 'all';
 let currentPage = 1;
 let totalPages;
+let currentItemsPerPage = getItemsPerPage();
 function getItemsPerPage() {
   return window.innerWidth >= 1440 ? 9 : 8;
 }
@@ -19,21 +23,20 @@ async function loadCategories() {
     const categories = await getCategories();
     renderCategories(categories);
   } catch (error) {
-    console.log('Categories load error:', error);
-    //   ADD ERROR MESSAGE TO USER
+    messageError(error.status);
   }
 }
 function renderCategories(categories) {
   let markup = categories
     .map(
       category => `<li class="our-pets-category-item">
-      <button class="category-btn" data-id="${category._id}" type="button">${category.name}</button>
+      <button class="category-btn" data-id="${category._id}" aria-label="${category.name}" type="button">${category.name}</button>
       </li>`
     )
     .join('');
   CATEGORIES.innerHTML =
     `<li class="our-pets-category-item">
-        <button class="category-btn active" data-id="all" type="button">
+        <button class="category-btn active" data-id="all" aria-label="Всі" type="button">
           Всі
         </button>
       </li>` + markup;
@@ -63,10 +66,9 @@ async function loadAnimals(loadMore = false) {
     currentPage = 1;
   }
   const category = currentCategory === 'all' ? '' : currentCategory;
-  const perPage = getItemsPerPage();
   try {
-    const result = await searchPets(category, currentPage, perPage);
-    totalPages = Math.ceil(result.totalItems / perPage);
+    const result = await searchPets(category, currentPage, currentItemsPerPage);
+    totalPages = Math.ceil(result.totalItems / currentItemsPerPage);
     renderAnimals(result.animals);
 
     checkPages(); //switches page button if necessary
@@ -76,11 +78,23 @@ async function loadAnimals(loadMore = false) {
       petsStore = result.animals;
     }
   } catch (error) {
-    console.log('error'); // ADD ERROR MESSAGE TO USER
+    messageError(error.status);
   } finally {
     hideLoader();
   }
 }
+
+ANIMAL_LIST.addEventListener('click', event => {
+  const btn = event.target.closest('.pets-btn');
+  if (!btn) return;
+
+  const petId = btn.dataset.id;
+  const petData = getPetByID(petId);
+
+  if (petData) {
+    openModal(petData);
+  }
+});
 
 function renderAnimals(animals) {
   let markup = animals
@@ -106,7 +120,7 @@ function renderAnimals(animals) {
         <p class="pets-short-description">
           ${pet.shortDescription}
         </p>
-        <button class="pets-btn" type="button" data-id="${pet._id}">Дізнатись більше</button>
+        <button class="pets-btn" type="button" data-id="${pet._id}" aria-label="Дізнатись більше про ${pet.name}">Дізнатись більше</button>
       </li>`;
     })
     .join('');
@@ -133,18 +147,18 @@ async function loadPage() {
   }
 }
 function hidePageButton() {
-  PAGE_BUTTON.classList.add('IsHidden');
+  PAGE_BUTTON.classList.add('is-hidden');
 }
 function showPageButton() {
-  PAGE_BUTTON.classList.remove('IsHidden');
+  PAGE_BUTTON.classList.remove('is-hidden');
 }
 // LOADER
 const LOADER = document.querySelector('.loader');
 function hideLoader() {
-  LOADER.classList.add('IsHidden');
+  LOADER.classList.add('is-hidden');
 }
 function showLoader() {
-  LOADER.classList.remove('IsHidden');
+  LOADER.classList.remove('is-hidden');
 }
 
 async function initPets() {
