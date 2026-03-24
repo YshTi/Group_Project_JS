@@ -31,11 +31,11 @@
   "main": "vite.config.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/YshTi/Group_Project_JS.git"
+    "url": "git+https://github.com/YshTi/Group_Project_JS_Animal_Adoption.git"
   },
   "keywords": [],
   "bugs": {
-    "url": "https://github.com/YshTi/Group_Project_JS/issues"
+    "url": "https://github.com/YshTi/Group_Project_JS_Animal_Adoption/issues"
   },
-  "homepage": "https://github.com/YshTi/Group_Project_JS#readme"
+  "homepage": "https://github.com/YshTi/Group_Project_JS_Animal_Adoption#readme"
 }
