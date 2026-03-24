@@ -2,7 +2,7 @@
 
 ## Pets adoption website
 
-[![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://travis-ci.org/joemccann/dillinger)
+![GitHub repo size](https://img.shields.io/github/repo-size/YshTi/Group_Project_JS_Animal_Adoption)
 
 (_This project was created by a group of students during the JavaScript learning
 program at the GoIT course._)
